@@ -506,7 +506,7 @@ function RosieLibrary:ToggleButton(ToggleConfig)
 
     	UICorner1.CornerRadius = UDim.new(0, 3)
     	UICorner1.Parent = ImageLabel
-
+	
 	local Open = true
 	ToggleButton.MouseButton1Down:Connect(function()
 		if Open == false then
@@ -516,6 +516,7 @@ function RosieLibrary:ToggleButton(ToggleConfig)
 		end
 	end)
 end
+
 function RosieLibrary:Init()
      loadSettings()
      RosieLibrary:Notification({Title = "Save Settings.", Content = "Loading Save Settings Success.", Time = 5})
