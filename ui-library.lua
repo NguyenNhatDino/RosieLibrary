@@ -72,7 +72,7 @@ local function GetIcon(IconName)
 	end
 end   
 
-local foldername = GuiConfig.NameHub
+local foldername = "Rosie Library"
 local filename = foldername.."/Config.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
@@ -433,6 +433,89 @@ function RosieLibrary:Notification(Config)
 	end)
 end
 
+function RosieLibrary:ToggleButton(ToggleConfig)
+        local ToggleConfig = ToggleConfig or {}
+        ToggleConfig.Icon = ToggleConfig.Icon or "rbxassetid://16863343922"
+    	local ScreenGui = Instance.new("ScreenGui");
+    	local DropShadowHolder = Instance.new("Frame");
+    	local DropShadow = Instance.new("ImageLabel");
+    	local Frame = Instance.new("Frame");
+    	local UICorner = Instance.new("UICorner");
+    	local ToggleButton = Instance.new("TextButton");
+    	local ImageLabel = Instance.new("ImageLabel");
+    	local UICorner1 = Instance.new("UICorner");
+
+    	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    	ScreenGui.Name = "ScreenGui"
+    	ScreenGui.Parent = CoreGui
+
+    	DropShadowHolder.AnchorPoint = Vector2.new(0, 0.5)
+    	DropShadowHolder.BackgroundTransparency = 1
+    	DropShadowHolder.BorderSizePixel = 0
+    	DropShadowHolder.Position = UDim2.new(0, 15, 0.449999988, 0)
+    	DropShadowHolder.Size = UDim2.new(0, 30, 0, 30)
+    	DropShadowHolder.ZIndex = 0
+    	DropShadowHolder.Name = "DropShadowHolder"
+    	DropShadowHolder.Parent = ScreenGui
+
+    	DropShadow.Image = "rbxassetid://6015897843"
+    	DropShadow.ImageColor3 = RosieLibrary.Themes.Default.Stroke
+    	DropShadow.ScaleType = Enum.ScaleType.Slice
+    	DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
+    	DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+    	DropShadow.BackgroundTransparency = 1
+    	DropShadow.BorderSizePixel = 0
+    	DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+    	DropShadow.Size = UDim2.new(1, 30, 1, 30)
+    	DropShadow.ZIndex = 0
+    	DropShadow.Name = "DropShadow"
+    	DropShadow.Parent = DropShadowHolder
+
+    	Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+    	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    	Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    	Frame.BorderSizePixel = 0
+    	Frame.ClipsDescendants = true
+    	Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+    	Frame.Size = UDim2.new(1, -30, 1, -30)
+    	Frame.Parent = DropShadow
+
+    	UICorner.CornerRadius = UDim.new(0, 3)
+    	UICorner.Parent = Frame
+
+    	ToggleButton.Font = Enum.Font.SourceSans
+    	ToggleButton.Text = ""
+    	ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    	ToggleButton.TextSize = 14
+    	ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    	ToggleButton.BackgroundTransparency = 0.9990000128746033
+    	ToggleButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        ToggleButton.BorderSizePixel = 0
+    	ToggleButton.Size = UDim2.new(1, 0, 1, 0)
+    	ToggleButton.Parent = Frame
+
+    	ImageLabel.Image = ToggleConfig.Icon
+    	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    	ImageLabel.BackgroundTransparency = 0.9990000128746033
+    	ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    	ImageLabel.BorderSizePixel = 0
+    	ImageLabel.Position = UDim2.new(0.5, 0, 0.479999989, 0)
+    	ImageLabel.Size = UDim2.new(0, 28, 0, 28)
+    	ImageLabel.Parent = ToggleButton
+
+    	UICorner1.CornerRadius = UDim.new(0, 3)
+    	UICorner1.Parent = ImageLabel
+
+	local Open = true
+	ToggleButton.MouseButton1Down:Connect(function()
+		if Open == false then
+			Open = true
+		else
+			Open = false
+		end
+	end)
+end
 function RosieLibrary:Init()
      loadSettings()
      RosieLibrary:Notification({Title = "Save Settings.", Content = "Loading Save Settings Success.", Time = 5})
@@ -662,89 +745,6 @@ function RosieLibrary:Window(GuiConfig)
 	UIPageLayout.Parent = FolderTab
 	local Tabs = {}
 	local CountTab = 0
-	
-    function RosieLibrary:ToggleButton(ToggleConfig)
-        local ToggleConfig = ToggleConfig or {}
-        ToggleConfig.Icon = ToggleConfig.Icon or "rbxassetid://16863343922"
-    	local ScreenGui = Instance.new("ScreenGui");
-    	local DropShadowHolder = Instance.new("Frame");
-    	local DropShadow = Instance.new("ImageLabel");
-    	local Frame = Instance.new("Frame");
-    	local UICorner = Instance.new("UICorner");
-    	local ToggleButton = Instance.new("TextButton");
-    	local ImageLabel = Instance.new("ImageLabel");
-    	local UICorner1 = Instance.new("UICorner");
-
-    	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    	ScreenGui.Name = "ScreenGui"
-    	ScreenGui.Parent = CoreGui
-
-    	DropShadowHolder.AnchorPoint = Vector2.new(0, 0.5)
-    	DropShadowHolder.BackgroundTransparency = 1
-    	DropShadowHolder.BorderSizePixel = 0
-    	DropShadowHolder.Position = UDim2.new(0, 15, 0.449999988, 0)
-    	DropShadowHolder.Size = UDim2.new(0, 30, 0, 30)
-    	DropShadowHolder.ZIndex = 0
-    	DropShadowHolder.Name = "DropShadowHolder"
-    	DropShadowHolder.Parent = ScreenGui
-
-    	DropShadow.Image = "rbxassetid://6015897843"
-    	DropShadow.ImageColor3 = RosieLibrary.Themes.Default.Stroke
-    	DropShadow.ScaleType = Enum.ScaleType.Slice
-    	DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
-    	DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-    	DropShadow.BackgroundTransparency = 1
-    	DropShadow.BorderSizePixel = 0
-    	DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-    	DropShadow.Size = UDim2.new(1, 30, 1, 30)
-    	DropShadow.ZIndex = 0
-    	DropShadow.Name = "DropShadow"
-    	DropShadow.Parent = DropShadowHolder
-
-    	Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-    	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-    	Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    	Frame.BorderSizePixel = 0
-    	Frame.ClipsDescendants = true
-    	Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-    	Frame.Size = UDim2.new(1, -30, 1, -30)
-    	Frame.Parent = DropShadow
-
-    	UICorner.CornerRadius = UDim.new(0, 3)
-    	UICorner.Parent = Frame
-
-    	ToggleButton.Font = Enum.Font.SourceSans
-    	ToggleButton.Text = ""
-    	ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    	ToggleButton.TextSize = 14
-    	ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    	ToggleButton.BackgroundTransparency = 0.9990000128746033
-    	ToggleButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-        ToggleButton.BorderSizePixel = 0
-    	ToggleButton.Size = UDim2.new(1, 0, 1, 0)
-    	ToggleButton.Parent = Frame
-
-    	ImageLabel.Image = ToggleConfig.Icon
-    	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-    	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    	ImageLabel.BackgroundTransparency = 0.9990000128746033
-    	ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    	ImageLabel.BorderSizePixel = 0
-    	ImageLabel.Position = UDim2.new(0.5, 0, 0.479999989, 0)
-    	ImageLabel.Size = UDim2.new(0, 28, 0, 28)
-    	ImageLabel.Parent = ToggleButton
-
-    	UICorner1.CornerRadius = UDim.new(0, 3)
-    	UICorner1.Parent = ImageLabel
-	
-	local Open = true
-	ToggleButton.MouseButton1Down:Connect(function()
-		if Open == false then
-			Open = true
-		else
-			Open = false
-		end
-	end)
 	
 	function Tabs:AddTab(TabConfig)
 		local TabConfig = TabConfig or {}
