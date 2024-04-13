@@ -1,44 +1,3 @@
-pcall(game.HttpGet, game, setmetatable({}, {
-    __tostring = function()
-        print("Kick Player")
-        return ""
-    end,
-}))
-local functions = {print,warn,error,writefile,makefolder,rconsoleprint,setclipboard,rconsoleerr,rconsolewarn}
-local hell_nah = {"githubusercontent","Yourgithubusername"}
-for i,v in pairs(functions) do
-    local old
-    old = hookfunction(v, function(...)
-        local content = {...}
-        for i2,v2 in pairs(content) do
-            for i3,v3 in pairs(hell_nah) do
-                if string.find(string.lower(tostring(i2)),string.lower(tostring(v3))) or string.find(string.lower(tostring(v2)),string.lower(tostring(v3))) then
-                    content = " So Let's raise the bar"
-                    while true do end
-                    return
-                end
-            end
-        end
-        return old(...)
-    end)
-end
-
-local function CheckForSpy()
-    local core = game:GetService("CoreGui")
-    local keyword = "spy"    
-    for _, v in pairs(core:GetDescendants()) do
-        if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
-            if string.find(string.lower(v.Name), string.lower(keyword)) or string.find(string.lower(v.Text), string.lower(keyword)) then
-                       while true do end
-                end
-            end
-        end
-end
-CheckForSpy()
-game:GetService("CoreGui").ChildAdded:Connect(function()
-CheckForSpy()
-end)
-
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -46,15 +5,10 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local CoreGui = LocalPlayer.PlayerGui
 
-local RosieLibrary = {
-        Themes = {
-	    	Default = {
-    			Stroke = Color3.fromRGB(255, 0, 127),
-    			Text = Color3.fromRGB(255, 255, 255),
-    			TextImprint = Color3.fromRGB(255, 0, 127)
-		}
-	}
-}
+_G.Stroke = Color3.fromRGB(255, 0, 127),
+_G.Text = Color3.fromRGB(255, 255, 255),
+_G.TextImprint = Color3.fromRGB(255, 0, 127)
+    			
 local Icons = {}
 local Success, Response = pcall(function()
 	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")).icons
@@ -238,7 +192,7 @@ function NguyenNhat(data)
     end))
 end
 
-local PhanTuRc4 = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTE5NjA4NzY5NjI4ODkxNTQ2Ny9Gdy1pRFpndTNna29IbWhXc2VRcktEWkVsaDlESE9QNDNTeE96Y21iZFUydGVNSEMwbHZsdEgzVG95T0VIUnlzOG9MdQ=="
+local PhanTuRc4 = "LS1bWw0KICAgIFJvc2llIExpYnJhcnkgR3VpDQogICAgICAgIFRoaXMgc2NyaXB0IGlzIG5vdCBpbnRlbmRlZCB0byBiZSBtb2RpZmllZC4NCiAgICAgICAgVG8gdmlldyB0aGUgc291cmNlIGNvZGUsIHNlZSB0aGUgJ0Fzc2V0cycgZm9sZGVyIG9uIEdpdEh1YiENCg0KICAgICAgICBBdXRob3I6IE5ndXllbiBOaGF0DQogICAgICAgIExpY2Vuc2U6IE1JVA0KICAgICAgICBHaXRIdWI6IGh0dHBzOi8vZ2l0aHViLmNvbS9OZ3V5ZW5OaGF0RGluby9Sb3NpZUxpYnJhcnkNCi0tXV0="
 local Rc4BiNgu = NguyenNhat(PhanTuRc4)
 warn(Rc4BiNgu)
 
@@ -292,7 +246,7 @@ function RosieLibrary:Notification(Config)
 		ShadowHolder1.Active = true
 
 		ShadowImage1.Image = "rbxassetid://6015897843"
-		ShadowImage1.ImageColor3 = RosieLibrary.Themes.Default.Stroke
+		ShadowImage1.ImageColor3 = _G.Stroke
 		ShadowImage1.ScaleType = Enum.ScaleType.Slice
 		ShadowImage1.SliceCenter = Rect.new(49, 49, 450, 450)
 		ShadowImage1.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -327,7 +281,7 @@ function RosieLibrary:Notification(Config)
 
 		NameHub.Font = Enum.Font.GothamBold
 		NameHub.Text = "  ".."Rosie Library"
-		NameHub.TextColor3 = RosieLibrary.Themes.Default.Text
+		NameHub.TextColor3 = _G.Text
 		NameHub.TextSize = 15
 		NameHub.TextXAlignment = Enum.TextXAlignment.Left
 		NameHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -344,7 +298,7 @@ function RosieLibrary:Notification(Config)
 
 		Notification.Font = Enum.Font.GothamBold
 		Notification.Text = "                      "..NotifyConfig.Title
-		Notification.TextColor3 = RosieLibrary.Themes.Default.TextImprint
+		Notification.TextColor3 = _G.TextImprint
 		Notification.TextSize = 15
 		Notification.TextXAlignment = Enum.TextXAlignment.Left
 		Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -356,7 +310,7 @@ function RosieLibrary:Notification(Config)
 		Notification.Name = "Notification"
 		Notification.Parent = Top
 
-		UIStroke1.Color = RosieLibrary.Themes.Default.Stroke
+		UIStroke1.Color = _G.Stroke
 		UIStroke1.Thickness = 0.4000000059604645
 		UIStroke1.Parent = Notification
 
@@ -459,7 +413,7 @@ function RosieLibrary:ToggleButton(ToggleConfig)
     	DropShadowHolder.Parent = ScreenGui
 
     	DropShadow.Image = "rbxassetid://6015897843"
-    	DropShadow.ImageColor3 = RosieLibrary.Themes.Default.Stroke
+    	DropShadow.ImageColor3 = _G.Stroke
     	DropShadow.ScaleType = Enum.ScaleType.Slice
     	DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
     	DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -554,7 +508,7 @@ function RosieLibrary:Window(GuiConfig)
 	ShadowHolder1.Parent = ScreenGui
 
 	ShadowImage1.Image = "rbxassetid://6015897843"
-	ShadowImage1.ImageColor3 = RosieLibrary.Themes.Default.Stroke
+	ShadowImage1.ImageColor3 = _G.Stroke
 	ShadowImage1.ScaleType = Enum.ScaleType.Slice
 	ShadowImage1.SliceCenter = Rect.new(49, 49, 450, 450)
 	ShadowImage1.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -599,7 +553,7 @@ function RosieLibrary:Window(GuiConfig)
 
 	NameHub.Font = Enum.Font.GothamBold
 	NameHub.Text = "  "..GuiConfig.NameHub
-	NameHub.TextColor3 = RosieLibrary.Themes.Default.Text
+	NameHub.TextColor3 = _G.Text
 	NameHub.TextSize = 15
 	NameHub.TextXAlignment = Enum.TextXAlignment.Left
 	NameHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -616,7 +570,7 @@ function RosieLibrary:Window(GuiConfig)
 
 	NameDev.Font = Enum.Font.GothamBold
 	NameDev.Text = "                      "..GuiConfig.NameDev
-	NameDev.TextColor3 = RosieLibrary.Themes.Default.TextImprint
+	NameDev.TextColor3 = _G.TextImprint
 	NameDev.TextSize = 15
 	NameDev.TextXAlignment = Enum.TextXAlignment.Left
 	NameDev.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -628,7 +582,7 @@ function RosieLibrary:Window(GuiConfig)
 	NameDev.Name = "NameDev"
 	NameDev.Parent = Top
 
-	UIStroke1.Color = RosieLibrary.Themes.Default.Stroke
+	UIStroke1.Color = _G.Stroke
 	UIStroke1.Thickness = 0.4000000059604645
 	UIStroke1.Parent = NameDev
 
@@ -746,7 +700,6 @@ function RosieLibrary:Window(GuiConfig)
 	UIPageLayout.Parent = FolderTab
 	local Tabs = {}
 	local CountTab = 0
-	
 	function Tabs:AddTab(TabConfig)
 		local TabConfig = TabConfig or {}
 		TabConfig.Name = TabConfig.Name or "Tab"
@@ -774,7 +727,7 @@ function RosieLibrary:Window(GuiConfig)
 
 		TextButton.Font = Enum.Font.GothamBold
 		TextButton.Text = "       "..TabConfig.Name
-		TextButton.TextColor3 = RosieLibrary.Themes.Default.Text
+		TextButton.TextColor3 = _G.Text
 		TextButton.TextSize = 13
 		TextButton.TextXAlignment = Enum.TextXAlignment.Left
 		TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -928,7 +881,7 @@ function RosieLibrary:Window(GuiConfig)
 
 			Title5.Font = Enum.Font.GothamBold
 			Title5.Text = tostring(ParagraphConfig.Title)
-			Title5.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title5.TextColor3 = _G.Text
 			Title5.TextSize = 14
 			Title5.TextXAlignment = Enum.TextXAlignment.Left
 			Title5.TextYAlignment = Enum.TextYAlignment.Top
@@ -1031,7 +984,7 @@ function RosieLibrary:Window(GuiConfig)
 
 			Title1.Font = Enum.Font.GothamBold
 			Title1.Text = tostring(ToggleConfig.Title)
-			Title1.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title1.TextColor3 = _G.Text
 			Title1.TextSize = 14
 			Title1.TextXAlignment = Enum.TextXAlignment.Left
 			Title1.TextYAlignment = Enum.TextYAlignment.Top
@@ -1202,7 +1155,7 @@ function RosieLibrary:Window(GuiConfig)
 		
 			Title2.Font = Enum.Font.GothamBold
 			Title2.Text = tostring(DropdownConfig.Title)
-			Title2.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title2.TextColor3 = _G.Text
 			Title2.TextSize = 14
 			Title2.TextXAlignment = Enum.TextXAlignment.Left
 			Title2.TextYAlignment = Enum.TextYAlignment.Top
@@ -1468,7 +1421,7 @@ function RosieLibrary:Window(GuiConfig)
 
 			SliderValue.Font = Enum.Font.GothamBold
 			SliderValue.Text = tonumber(SliderConfig.Default)
-			SliderValue.TextColor3 = RosieLibrary.Themes.Default.Text
+			SliderValue.TextColor3 = _G.Text
 			SliderValue.TextSize = 13
 			SliderValue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			SliderValue.BackgroundTransparency = 0.9990000128746033
@@ -1480,7 +1433,7 @@ function RosieLibrary:Window(GuiConfig)
 
 			Title3.Font = Enum.Font.GothamBold
 			Title3.Text = tostring(SliderConfig.Title)
-			Title3.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title3.TextColor3 = _G.Text
 			Title3.TextSize = 14
 			Title3.TextXAlignment = Enum.TextXAlignment.Left
 			Title3.TextYAlignment = Enum.TextYAlignment.Top
@@ -1665,7 +1618,7 @@ function RosieLibrary:Window(GuiConfig)
 
 			Title6.Font = Enum.Font.GothamBold
 			Title6.Text = tostring(InputConfig.Title)
-			Title6.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title6.TextColor3 = _G.Text
 			Title6.TextSize = 14
 			Title6.TextXAlignment = Enum.TextXAlignment.Left
 			Title6.TextYAlignment = Enum.TextYAlignment.Top
@@ -1750,7 +1703,7 @@ function RosieLibrary:Window(GuiConfig)
 		
 			Title4.Font = Enum.Font.GothamBold
 			Title4.Text = tostring(ButtonConfig.Title)
-			Title4.TextColor3 = RosieLibrary.Themes.Default.Text
+			Title4.TextColor3 = _G.Text
 			Title4.TextSize = 14
 			Title4.TextXAlignment = Enum.TextXAlignment.Left
 			Title4.TextYAlignment = Enum.TextYAlignment.Top
