@@ -451,7 +451,7 @@ function RosieLibrary:Window(GuiConfig)
 	local Top = Instance.new("Frame");
 	local NameHub = Instance.new("TextLabel");
 	local UIStroke = Instance.new("UIStroke");
-	local NameGam = Instance.new("TextLabel");
+	local NameDev = Instance.new("TextLabel");
 	local UIStroke1 = Instance.new("UIStroke");
 	local ChageSizeButton = Instance.new("TextButton");
 	local ImageLabel = Instance.new("ImageLabel");
@@ -530,23 +530,23 @@ function RosieLibrary:Window(GuiConfig)
 	UIStroke.Thickness = 0.20000000298023224
 	UIStroke.Parent = NameHub
 
-	NameGam.Font = Enum.Font.GothamBold
-	NameGam.Text = "                      "..GuiConfig.NameDev
-	NameGam.TextColor3 = RosieLibrary.Themes.Default.TextImprint
-	NameGam.TextSize = 15
-	NameGam.TextXAlignment = Enum.TextXAlignment.Left
-	NameGam.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	NameGam.BackgroundTransparency = 0.9990000128746033
-	NameGam.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	NameGam.BorderSizePixel = 0
-	NameGam.Position = UDim2.new(0, 1, 0, 0)
-	NameGam.Size = UDim2.new(1, 0, 1, 0)
-	NameGam.Name = "NameGam"
-	NameGam.Parent = Top
+	NameDev.Font = Enum.Font.GothamBold
+	NameDev.Text = "                      "..GuiConfig.NameDev
+	NameDev.TextColor3 = RosieLibrary.Themes.Default.TextImprint
+	NameDev.TextSize = 15
+	NameDev.TextXAlignment = Enum.TextXAlignment.Left
+	NameDev.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	NameDev.BackgroundTransparency = 0.9990000128746033
+	NameDev.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	NameDev.BorderSizePixel = 0
+	NameDev.Position = UDim2.new(0, 1, 0, 0)
+	NameDev.Size = UDim2.new(1, 0, 1, 0)
+	NameDev.Name = "NameDev"
+	NameDev.Parent = Top
 
 	UIStroke1.Color = RosieLibrary.Themes.Default.Stroke
 	UIStroke1.Thickness = 0.4000000059604645
-	UIStroke1.Parent = NameGam
+	UIStroke1.Parent = NameDev
 
 	ChageSizeButton.Font = Enum.Font.SourceSans
 	ChageSizeButton.Text = ""
@@ -741,10 +741,8 @@ function RosieLibrary:Window(GuiConfig)
 	ToggleButton.MouseButton1Down:Connect(function()
 		if Open == false then
 			Open = true
-			ShadowHolder1.Visible = true
 		else
 			Open = false
-			ShadowHolder1.Visible = false
 		end
 	end)
 	
