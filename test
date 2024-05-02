@@ -1,13 +1,13 @@
 spawn(function()
 		pcall(function()
 		hookfunction(print, function(...)
-			game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+			game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 			game:Shutdown()
 			while true do end
 			return
 		end)
 		hookfunction(warn, function(...)
-			game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+			game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 			game:Shutdown()
 			while true do end
 			return
@@ -22,21 +22,21 @@ spawn(function()
 		
 	hookfunction(print, function(a)
 		if string.find(a:lower(), "http") then
-			game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+			game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 			game:Shutdown()
 			while true do end
 		end
 	end)
 	hookfunction(warn, function(a)
 		if string.find(a:lower(), "http") then
-			game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+			game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 			game:Shutdown()
 			while true do end
 		end
 	end)
 	hookfunction(error, function(a)
 		if string.find(a:lower(), "http") then
-			game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+			game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 			game:Shutdown()
 			while true do end
 		end
@@ -45,7 +45,7 @@ spawn(function()
 		 local oldwrite
 			oldwrite = hookfunction(writefile, function(file, content)
 				if(string.find(string.lower(content), 'http') or string.find(string.lower(content), '//') or string.find(string.lower(content), 'https://discord.com/api/webhooks/')) then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return
@@ -56,7 +56,7 @@ spawn(function()
 			local oldappend
 			oldappend = hookfunction(appendfile, function(file, content)
 				if(string.find(string.lower(content), 'http') or string.find(string.lower(content), '//') or string.find(string.lower(content), 'https://discord.com/api/webhooks/')) then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return
@@ -66,7 +66,7 @@ spawn(function()
 			game.DescendantAdded:Connect(function(c)
 				if c and c:IsA('TextLabel') or c:IsA('TextButton') or c:IsA('Message') then
 					if string.find(string.lower(c.Text), 'http') then
-						game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+						game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 						game:Shutdown()
 						while true do end
 						c:Destroy()
@@ -81,7 +81,7 @@ spawn(function()
 			getgenv().clonefunction = function(...) while true do end return end
 			game.CoreGui.ChildAdded:Connect(function(c)
 				if(string.lower(c.Name) == 'devconsolemaster') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					c:Destroy()
@@ -91,43 +91,43 @@ spawn(function()
 			oldNamecall = hookmetamethod(game, '__namecall', newcclosure(function(self, ...)
 				local method = getnamecallmethod()
 				if(string.lower(method) == 'rconsoleprint') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return 
 				end
 				if(string.lower(method) == 'rconsoleinfo') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return 
 				end
 				if(string.lower(method) == 'rconsolewarn') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return 
 				end
 				if(string.lower(method) == 'rconsoleerr') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return
 				end
 				if(string.lower(method) == 'warn') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return
 				end
 				if(string.lower(method) == 'error') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return
 				end
 				if(string.lower(method) == 'rendernametag') then
-					game.Players.LocalPlayer:Kick("Anti Http Spy By Speed Hub X")
+					game.Players.LocalPlayer:Kick("Anti Http Spy By MTien Hub")
 					game:Shutdown()
 					while true do end
 					return 
@@ -137,71 +137,256 @@ spawn(function()
 			end)
 		end)
 
-local SpeedHubX = loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/Library.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/Interface.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/Key-System%20%26%20Keyless"))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://github.com/ImTienNguyenZ/MTienHub/raw/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://github.com/ImTienNguyenZ/MTienHub/raw/main/Fluent/Interface.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/MTienHub/main/Settings"))()
+notis = require(game.ReplicatedStorage:WaitForChild("Notification"))
+notis.new("<Color=Yellow>Thông Báo Bởi Nguyễn Minh Tiến:\n<Color=/>".. _G.ThongBao):Display()
+_G.SafeFarm = true
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
+local notif1 = Notification.new("message", "MTien Hub", "Script Loading..")
+wait(4)
+local notif2 = Notification.new("message", "MTien Hub", "Check Whilelist..")
+wait(3)
+local notif3 = Notification.new("message", "MTien Hub", "Check Bypass...")
+wait(2)
+local notif4 = Notification.new("success", "MTien Hub", "Script Loading Success ✅")
+wait(0.4)
+local notif5 = Notification.new("success", "MTien Hub", "Thank For Use MTien Hub ✅")
+wait(0.5)
+notif1:delete()
+wait(0.1)
+notif2:delete()
+wait(0.1)
+notif3:delete()
+wait(0.1)
+notif4:delete()
+wait(0.1)
+notif5:delete()
+wait(.1)
+assert(getrawmetatable)
+    grm = getrawmetatable(game)
+    setreadonly(grm, false)
+    old = grm.__namecall
+    grm.__namecall = newcclosure(function(self, ...)
+        local args = {...}
+        if tostring(args[1]) == "TeleportDetect" then
+            return
+        elseif tostring(args[1]) == "CHECKER_1" then
+            return
+        elseif tostring(args[1]) == "CHECKER" then
+            return
+        elseif tostring(args[1]) == "GUI_CHECK" then
+            return
+        elseif tostring(args[1]) == "OneMoreTime" then
+            return
+        elseif tostring(args[1]) == "checkingSPEED" then
+            return
+        elseif tostring(args[1]) == "BANREMOTE" then
+            return
+        elseif tostring(args[1]) == "PERMAIDBAN" then
+            return
+        elseif tostring(args[1]) == "KICKREMOTE" then
+            return
+        elseif tostring(args[1]) == "BR_KICKPC" then
+            return
+        elseif tostring(args[1]) == "BR_KICKMOBILE" then
+            return
+        end
+        return old(self, ...)
+    end)
+function CheckAntiCheatBypass()
+    for i,v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+        if v:IsA("LocalScript") then
+            if v.Name == "General" or v.Name == "Shiftlock"  or v.Name == "FallDamage" or v.Name == "4444" or v.Name == "CamBob" or v.Name == "JumpCD" or v.Name == "Looking" or v.Name == "Run" then
+                v:Destroy()
+            end
+        end
+     end
+     for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerScripts:GetDescendants()) do
+        if v:IsA("LocalScript") then
+            if v.Name == "RobloxMotor6DBugFix" or v.Name == "CustomForceField" or v.Name == "MenuBloodSp"  or v.Name == "PlayerList" then
+                v:Destroy()
+            end
+        end
+    end
+end
+
+local function bypassAntiExploit()
+    for _, instance in ipairs(filtergc()) do
+        if instance:IsA("AntiExploitSystem") then
+            instance:Destroy()
+        end
+    end
+end
+spawn(function()
+    while wait() do
+        if _G.SafeFarm then
+            pcall(function()
+                CheckAntiCheatBypass()
+                bypassAntiExploit()
+            end)
+        end
+    end
+end)
+print("Anti Cheat Bypass Active")
+notis.new("<Color=Red>Script Đã Có Bypass Anti Cheat, Còn Bị Reset Là Do Bạn\n Dùng Rất Nhiều Script Khác, Không Phải Tại MTien\n Nhé Cảm Ơn Đã Sử Dụng<Color=/>"):Display()
+print("Made By: Nguyen Minh Tien")
+warn("Định Deobf À Bé Yêu?")
+warn("Deobf Làm Gì:3")
+print("Anh Yêu Bé Mà Cứ Dms Xin Là Anh Cho:33")
 repeat wait() until game:IsLoaded()
-local Window = SpeedHubX:CreateWindow({
-    Title = "Speed Hub X | ".._G.Version,
-    SubTitle = "by AhmadV10",
+local Window = Fluent:CreateWindow({
+    Title = "MTien Hub",
+    SubTitle = _G.TieuDe,
     TabWidth = 160,
     Size = UDim2.fromOffset(560, 350),
     Acrylic = true, 
-    Theme = "Vampire",
-    MinimizeKey = Enum.KeyCode.Delete 
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.RightControl 
 })
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "home" }),wait(1),
-    Item = Window:AddTab({ Title = "Item", Icon = "swords" }),wait(),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),wait(1),
-    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),wait(1),
-    Island = Window:AddTab({ Title = "Island", Icon = "palmtree" }),wait(1),
-    Raid = Window:AddTab({ Title = "Dungeon", Icon = "sword" }),wait(1),
-    RaceV4 = Window:AddTab({ Title = "Race v4", Icon = "chevrons-right" }),wait(1),
-    Fruit = Window:AddTab({ Title = "Fruit", Icon = "apple" }),wait(1),
-    ESP = Window:AddTab({ Title = "ESP", Icon = "mountain-snow" }),wait(1),
-    Misc = Window:AddTab({ Title = "Miscellaneous", Icon = "list-plus" }),wait(1),
-    Visual = Window:AddTab({ Title = "Visual", Icon = "scan-face" }),wait(1),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),wait(1),
+    TienTiny = Window:AddTab({ Title = "Tab Information", Icon = "" }),wait(1),
+    Main = Window:AddTab({ Title = "Tab Main/Item", Icon = "" }),wait(1),
+    Stats = Window:AddTab({ Title = "Tab Stats/Shop", Icon = "" }),wait(1),
+    Island = Window:AddTab({ Title = "Tab Teleport", Icon = "" }),wait(1),
+    Raid = Window:AddTab({ Title = "Tab Dungeon/Fruit", Icon = "" }),wait(1),
+    RaceV4 = Window:AddTab({ Title = "Tab Race V4/Event", Icon = "" }),wait(1),
+    Visual = Window:AddTab({ Title = "Tab Visual/ESP", Icon = "" }),wait(1),
+    Misc = Window:AddTab({ Title = "Tab Misc", Icon = "" }),wait(1),
+    Settings = Window:AddTab({ Title = "Tab Settings", Icon = "" }),wait(1),
 }
-
-if game.CoreGui:FindFirstChild("SpeedHubXOpenClose") then
-    game.CoreGui:FindFirstChild("SpeedHubXOpenClose"):Destroy()
-end
-
-local UIStroke = Instance.new("UIStroke")
+local ScreenGui1 = Instance.new("ScreenGui")
+local ImageButton1 = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
 
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
+ScreenGui1.Name = "ImageButton"
+ScreenGui1.Parent = game.CoreGui
+ScreenGui1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "SpeedHubXOpenClose"
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
-ImageButton.Draggable = true
-ImageButton.Position = UDim2.new(0.102097899, 0, 0.0742971897, 0)
-ImageButton.Size = UDim2.new(0, 59, 0, 49)
-ImageButton.Image = "rbxassetid://15511158491"
-
-UICorner.Name = "MainCorner"
-UICorner.CornerRadius = UDim.new(0, 9)
-UICorner.Parent = ImageButton
-
-ImageButton.MouseButton1Down:connect(function()
-game:GetService("VirtualInputManager"):SendKeyEvent(true,127,false,game)
-game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
+ImageButton1.Parent = ScreenGui1
+ImageButton1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton1.BorderSizePixel = 0
+ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton1.Size = UDim2.new(0, 50, 0, 50)
+ImageButton1.Draggable = true
+ImageButton1.Image = "http://www.roblox.com/asset/?id=15850924286"
+ImageButton1.MouseButton1Down:connect(function()
+  game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+  game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
 end)
+UICorner.Parent = ImageButton1
+UIStroke.Color = Color3.fromRGB(252, 3, 161)
+UIStroke.Thickness = 1.5
+UIStroke.Parent = ImageButton1
 
-local Options = SpeedHubX.Options
-
+local RippleFPS = Instance.new("ScreenGui")
+	local Rippletime = Instance.new("ScreenGui")
+	local Framefps = Instance.new("Frame")
+	local Frametime = Instance.new("Frame")
+	local UICorner213 = Instance.new("UICorner")
+	local UICorner214 = Instance.new("UICorner")
+	local TextLabelfps = Instance.new("TextLabel")
+	local TextLabeltime = Instance.new("TextLabel")
+	local ImageLabelfps = Instance.new("ImageLabel")
+	local ImageLabeltime = Instance.new("ImageLabel")
+	local Strokefps = Instance.new("UIStroke")
+	local Stroketime = Instance.new("UIStroke")
+	
+	RippleFPS.Name = "RippleFPS"
+	RippleFPS.Parent = game.CoreGui
+	RippleFPS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Rippletime.Name = "Rippletime"
+	Rippletime.Parent = game.CoreGui
+	Rippletime.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Framefps.Name = "Framefps"
+	Framefps.Parent = RippleFPS
+	Framefps.AnchorPoint = Vector2.new(0.5, 0.5)
+	Framefps.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Framefps.BorderSizePixel = 0
+	Framefps.Position = UDim2.new(0.3, 0, -0.03, 0)
+	Framefps.Size = UDim2.new(0, 70, 0, 40)
+	
+	UICorner213.CornerRadius = UDim.new(0, 4)
+	UICorner213.Parent = Framefps
+	
+	Strokefps.Thickness = 1
+	Strokefps.Name = ""
+	Strokefps.Parent = Framefps
+	Strokefps.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	Strokefps.LineJoinMode = Enum.LineJoinMode.Round
+	Strokefps.Color = Color3.fromRGB(252, 3, 161)
+	Strokefps.Transparency = 0
+	
+	Frametime.Name = "Frametime"
+	Frametime.Parent = Rippletime
+	Frametime.AnchorPoint = Vector2.new(0.53, 0.5)
+	Frametime.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Frametime.BorderSizePixel = 0
+	Frametime.Position = UDim2.new(0.5, 0, -0.03, 0)
+	Frametime.Size = UDim2.new(0, 240, 0, 40)
+	
+	UICorner214.CornerRadius = UDim.new(0, 4)
+	UICorner214.Parent = Frametime
+	
+	Stroketime.Thickness = 1
+	Stroketime.Name = ""
+	Stroketime.Parent = Frametime
+	Stroketime.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	Stroketime.LineJoinMode = Enum.LineJoinMode.Round
+	Stroketime.Color = Color3.fromRGB(252, 3, 161)
+	Stroketime.Transparency = 0
+	
+	TextLabelfps.Name = "TextLabelfps"
+	TextLabelfps.Parent = Framefps
+	TextLabelfps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabelfps.BackgroundTransparency = 1.000
+	TextLabelfps.Position = UDim2.new(0,0,0,0)
+	TextLabelfps.Size = UDim2.new(1,0,1,0)
+	TextLabelfps.Font = Enum.Font.Ubuntu
+	TextLabelfps.Text = "Loading..."
+	TextLabelfps.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabelfps.TextSize = 16.000
+	TextLabelfps.TextXAlignment = Enum.TextXAlignment.Center
+	
+	TextLabeltime.Name = "TextLabeltime"
+	TextLabeltime.Parent = Frametime
+	TextLabeltime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabeltime.BackgroundTransparency = 1.000
+	TextLabeltime.Position = UDim2.new(0,0,0,0)
+	TextLabeltime.Size = UDim2.new(1,0,1,0)
+	TextLabeltime.Font = Enum.Font.Ubuntu
+	TextLabeltime.Text = "Loading..."
+	TextLabeltime.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabeltime.TextSize = 16.000
+	TextLabeltime.TextXAlignment = Enum.TextXAlignment.Center
+	
+	spawn(function()
+		while wait() do
+			pcall(function()
+				local scripttime=game.Workspace.DistributedGameTime
+				local seconds = scripttime%60
+				local minutes = math.floor(scripttime/60%60)
+				local hours = math.floor(scripttime/3600)
+				local tempo = string.format("[%.0f Hour's , %.0f Minute , %.0f Second]", hours ,minutes, seconds)
+				TextLabeltime.Text = tempo
+			end)
+		end
+	end)
+	
+	spawn(function()
+		while wait() do
+			pcall(function()
+				TextLabelfps.Text = "FPS: "..string.format("%d",workspace:GetRealPhysicsFPS())
+			end)
+		end
+	end)
+local Options = Fluent.Options
 do
 
 game:GetService("Players").LocalPlayer.Idled:connect(
@@ -581,16 +766,16 @@ end
 	
 function LoadSettings()
     if readfile and writefile and isfile and isfolder then
-        if not isfolder("SpeedHubX_V2") then
-            makefolder("SpeedHubX_V2")
+        if not isfolder("MTien Hub 2.0") then
+            makefolder("MTien Hub 2.0")
         end
-        if not isfolder("SpeedHubX_V2/Blox Fruits/") then
-            makefolder("SpeedHubX_V2/Blox Fruits/")
+        if not isfolder("MTien Hub 2.0/Blox Fruits/") then
+            makefolder("MTien Hub 2.0/Blox Fruits/")
         end
-        if not isfile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
-            writefile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(_G.Settings))
+        if not isfile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
+            writefile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(_G.Settings))
         else
-            local Decode = game:GetService("HttpService"):JSONDecode(readfile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
+            local Decode = game:GetService("HttpService"):JSONDecode(readfile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
             for i,v in pairs(Decode) do
                 _G.Settings[i] = v
             end
@@ -602,15 +787,15 @@ end
 
 function SaveSettings()
     if readfile and writefile and isfile and isfolder then
-        if not isfile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
+        if not isfile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json") then
             LoadSettings()
         else
-            local Decode = game:GetService("HttpService"):JSONDecode(readfile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
+            local Decode = game:GetService("HttpService"):JSONDecode(readfile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"))
             local Array = {}
             for i,v in pairs(_G.Settings) do
                 Array[i] = v
             end
-            writefile("SpeedHubX_V2/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(Array))
+            writefile("MTien Hub 2.0/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(Array))
         end
     else
         return warn("Status: error")
@@ -1781,7 +1966,7 @@ end)
 		end
 	end
 	
-    local Status = Tabs.Main:AddParagraph({
+    local Status = Tabs.TienTiny:AddParagraph({
         Title = "Home",
         Content = "Status:"
     })
@@ -1809,11 +1994,32 @@ end)
         end
     end)
     
-    Tabs.Main:AddButton({
-        Title = "Join Discord - Speed Hub X",
-        Description = "Invite Discord Speed Hub X!",
+    Tabs.TienTiny:AddParagraph({
+            Title = "Owners: Nguyen Minh Tien",
+        })
+    Tabs.TienTiny:AddParagraph({
+            Title = "Dong Luc Coding: Park Chaeyoung (Rosé)",
+        })
+    
+    Tabs.TienTiny:AddButton({
+        Title = "Join Discord - MTien Hub",
+        Description = "Invite Discord MTien Hub!",
         Callback = function()
             setclipboard(_G.Discord)
+        end
+    })
+    Tabs.TienTiny:AddButton({
+        Title = "Subscribe YouTube Official",
+        Description = "Please Subscribe My YouTube!",
+        Callback = function()
+            setclipboard(_G.YouTube)
+        end
+    })
+    Tabs.TienTiny:AddButton({
+        Title = "Follow Tik Tok",
+        Description = "Please Follow My Tik Tok!",
+        Callback = function()
+            setclipboard(_G.TikTok)
         end
     })
     
@@ -1909,10 +2115,10 @@ task.spawn(function()
     end
 end)
 
-FastAttack = {"Slow","Fast","Extreme",}
+FastAttack = {"Slow","Fast","Super Fast",}
 
 local SetAttack = Tabs.Main:AddDropdown("DropdownAttackType", {
-    Title = "Attack Type",
+    Title = "Fast Attack Delay",
     Values = FastAttack,
     Multi = false,
     Default = 1,
@@ -1926,7 +2132,7 @@ SetAttack:OnChanged(function(a)
 		_G.Fast_Delay = 10
 	elseif SelectSpeedFast == "Fast" then
 		_G.Fast_Delay = 0.029
-	elseif SelectSpeedFast == "Extreme" then
+	elseif SelectSpeedFast == "Super Fast" then
 		_G.Fast_Delay = 0
 	end
 end)
@@ -2619,11 +2825,11 @@ Tabs.Main:AddParagraph({
 })
 
 if World1 then
-    tableBoss = {"DauCoGhe Raid Boss [Lv. 7000]","The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
+    tableBoss = {"The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
 elseif World2 then
-    tableBoss = {"DauCoGhe Raid Boss [Lv. 8000]","Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
+    tableBoss = {"Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
 elseif World3 then
-    tableBoss = {"DauCoGhe Raid Boss [Lv. 9000]","Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
+    tableBoss = {"Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
 end
 
 local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
@@ -2890,7 +3096,7 @@ end)
 
 if World1 then
     Tabs.Main:AddParagraph({
-        Title = "Status : World 1",
+        Title = "Status: World 1",
         Content = ""
     })
 
@@ -2948,7 +3154,7 @@ end
 
 if World2 then
     Tabs.Main:AddParagraph({
-        Title = "Status : World 2",
+        Title = "Status: World 2",
         Content = ""
     })
 
@@ -3168,12 +3374,12 @@ if World2 then
 end
 
 if W1 then
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Saber | First World",
 	Content = ""
 })
 
-local AutoFarmSaberToggle = Tabs.Item:AddToggle("AutoSaber_Toggle", {Title = "Auto Saber", Default = false })
+local AutoFarmSaberToggle = Tabs.Main:AddToggle("AutoSaber_Toggle", {Title = "Auto Saber", Default = false })
 Options.AutoSaber_Toggle:SetValue(false)
 
 AutoFarmSaberToggle:OnChanged(function(value)
@@ -3305,7 +3511,7 @@ spawn(function()
 	end
 end)
 
-local AutoFarmPoleToggle = Tabs.Item:AddToggle("AutoPole_Toggle", {Title = "Auto Pole", Default = false })
+local AutoFarmPoleToggle = Tabs.Main:AddToggle("AutoPole_Toggle", {Title = "Auto Pole", Default = false })
 Options.AutoPole_Toggle:SetValue(false)
 
 AutoFarmPoleToggle:OnChanged(function(value)
@@ -3347,12 +3553,12 @@ end)
 end
 
 if W3 then
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
     Title = "Hallow Scythe",
     Content = ""
 })
 
-local HallowToggle = Tabs.Item:AddToggle("Hallow_Toggle", {Title = "Auto Hallow Scythe", Default = false })
+local HallowToggle = Tabs.Main:AddToggle("Hallow_Toggle", {Title = "Auto Hallow Scythe", Default = false })
 Options.Hallow_Toggle:SetValue(false)
 
 HallowToggle:OnChanged(function(value)
@@ -3398,12 +3604,12 @@ end)
 end
 
 if W2 then
-	Tabs.Item:AddParagraph({
+	Tabs.Main:AddParagraph({
 		Title = "Factory | Second World",
 		Content = ""
 	})
 
-	local AutoFarmFactoryToggle = Tabs.Item:AddToggle("AutoFactory_Toggle", {Title = "Auto Factory", Default = false })
+	local AutoFarmFactoryToggle = Tabs.Main:AddToggle("AutoFactory_Toggle", {Title = "Auto Factory", Default = false })
 	Options.AutoFactory_Toggle:SetValue(false)
 	
 	AutoFarmFactoryToggle:OnChanged(function(value)
@@ -3437,12 +3643,12 @@ if W2 then
 	end)
 
 
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Ectoplasm",
 	Content = ""
 })
 
-local AutoFarmEctoplasmToggle = Tabs.Item:AddToggle("AutoEctoplasm_Toggle", {Title = "Auto Ectoplasm", Default = false })
+local AutoFarmEctoplasmToggle = Tabs.Main:AddToggle("AutoEctoplasm_Toggle", {Title = "Auto Ectoplasm", Default = false })
 Options.AutoEctoplasm_Toggle:SetValue(false)
 
 AutoFarmEctoplasmToggle:OnChanged(function(value)
@@ -3505,12 +3711,12 @@ spawn(function()
 end)
 
 if W2 then
-	Tabs.Item:AddParagraph({
+	Tabs.Main:AddParagraph({
 		Title = "Sea Beast",
 		Content = ""
 	})
 
-	local AutoSeaBeastToggle = Tabs.Item:AddToggle("AutoSeaBeast_Toggle", {Title = "Auto Sea Beast King", Default = false })
+	local AutoSeaBeastToggle = Tabs.Main:AddToggle("AutoSeaBeast_Toggle", {Title = "Auto Sea Beast King", Default = false })
 	Options.AutoSeaBeast_Toggle:SetValue(false)
 	
 	AutoSeaBeastToggle:OnChanged(function(value)
@@ -3565,12 +3771,12 @@ if W2 then
 	end
 end)
 
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Dack Coat",
 	Content = ""
 })
 
-local AutoFarmDarkToggle = Tabs.Item:AddToggle("AutoDark_Toggle", {Title = "Auto Dark Coat", Default = false })
+local AutoFarmDarkToggle = Tabs.Main:AddToggle("AutoDark_Toggle", {Title = "Auto Dark Coat", Default = false })
 Options.AutoDark_Toggle:SetValue(false)
 
 AutoFarmDarkToggle:OnChanged(function(value)
@@ -3620,12 +3826,12 @@ task.spawn(function()
     end)
 end
 
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Swan Glasses",
 	Content = ""
 })
 
-local AutoFarmSwanToggle = Tabs.Item:AddToggle("AutoSwan_Toggle", {Title = "Auto Swan Glasses", Default = false })
+local AutoFarmSwanToggle = Tabs.Main:AddToggle("AutoSwan_Toggle", {Title = "Auto Swan Glasses", Default = false })
 Options.AutoSwan_Toggle:SetValue(false)
 
 AutoFarmSwanToggle:OnChanged(function(value)
@@ -3633,7 +3839,7 @@ AutoFarmSwanToggle:OnChanged(function(value)
 	_G.Settings.Auto_Swan_Glasses = value
 end)
 
-local AutoFarmSwanHopToggle = Tabs.Item:AddToggle("AutoSwanHop_Toggle", {Title = "Auto Swan Glasses [Hop]", Default = false })
+local AutoFarmSwanHopToggle = Tabs.Main:AddToggle("AutoSwanHop_Toggle", {Title = "Auto Swan Glasses [Hop]", Default = false })
 Options.AutoSwanHop_Toggle:SetValue(false)
 
 AutoFarmSwanHopToggle:OnChanged(function(value)
@@ -3670,338 +3876,12 @@ spawn(function()
 end)
 end
 
-local StatusSeaRough = Tabs.Item:AddParagraph({
-    Title = "Sea Rough",
-    Content = ""
-})
-
-
-task.spawn(function()
-    while task.wait() do
-        pcall(function()
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name, "Terror") then
-					StatusTerror = "Found"
-				else 
-					StatusTerror = "Not Found"
-				end
-			end
-			
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name, "Piranha") then
-					StatusSea = "Found"
-				else 
-					StatusSea = "Not Found"
-				end
-			end
-			
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name, "Shark") then
-					StatusSea1 = "Found"
-				else 
-					StatusSea1 = "Not Found"
-				end
-			end
-			
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name, "Fish Crew Member") then
-					StatusSea2 = "Found"
-				else 
-			StatusSea2 = "Not Found"
-		end
-    end
- end)
-end
-end)
-
-task.spawn(function()
-    while wait() do
-        pcall(function()
-			StatusSeaRough:SetDesc("Terrorshark: "..StatusTerror.." | Piranha: "..StatusSea.." | Shark: "..StatusSea1.." | Fish Crew Member:"..StatusSea2) 
-		end)
-	end
-end)
-
-
-local AutoKillEventToggle = Tabs.Item:AddToggle("AutoKillEvent_Toggle", {Title = "Auto Kill [Event]", Default = false })
-Options.AutoKillEvent_Toggle:SetValue(false)
-
-AutoKillEventToggle:OnChanged(function(value)
-	_G.AutoEvent = value
-end)
-
-spawn(function()
-	while wait() do 
-		if _G.AutoEvent then 
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name, "Fish Crew Member") or string.find(v.Name, "Piranha") or string.find(v.Name,"Shark") or string.find(v.Name , "Terror") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
-					if v.Humanoid.Health > 0 then 
-						repeat
-							game:GetService("RunService").Heartbeat:wait()
-							EquipWeapon(_G.Select_Weapon)
-							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-								local args = {
-									[1] = "Buso"
-								}
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-							v.Head.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
-							FastAttack = true
-							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-							if not FastAttack then
-								game:GetService 'VirtualUser':CaptureController()
-								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-						until not _G.AutoEvent or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
-					end
-				end
-			end
-		end
-	end
-end)
-
-local AutoKillTerrorsharkToggle = Tabs.Item:AddToggle("AutoKillTerrorshark_Toggle", {Title = "Auto Kill Terrorshark", Default = false })
-Options.AutoKillTerrorshark_Toggle:SetValue(false)
-
-AutoKillTerrorsharkToggle:OnChanged(function(value)
-	_G.AutoKillTerrorshark = value
-end)
-
-spawn(function()
-	while wait() do 
-		if _G.AutoKillTerrorshark then 
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name , "Terror") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
-					if v.Humanoid.Health > 0 then 
-						repeat
-							game:GetService("RunService").Heartbeat:wait()
-							EquipWeapon(_G.Select_Weapon)
-							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-								local args = {
-									[1] = "Buso"
-								}
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-							v.Head.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
-							FastAttack = true
-							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-							if not FastAttack then
-								game:GetService 'VirtualUser':CaptureController()
-								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-						until not _G.AutoKillTerrorshark or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
-					end
-				end
-			end
-		end
-	end
-end)
-
-local AutoKillPiranhaToggle = Tabs.Item:AddToggle("AutoKillPiranha_Toggle", {Title = "Auto Kill Piranha", Default = false })
-Options.AutoKillPiranha_Toggle:SetValue(false)
-
-AutoKillPiranhaToggle:OnChanged(function(value)
-	_G.AutoKillPiranha = value
-end)
-
-spawn(function()
-	while wait() do 
-		if _G.AutoKillPiranha then 
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name , "Piranha") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
-					if v.Humanoid.Health > 0 then 
-						repeat
-							game:GetService("RunService").Heartbeat:wait()
-							EquipWeapon(_G.Select_Weapon)
-							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-								local args = {
-									[1] = "Buso"
-								}
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-							v.Head.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
-							FastAttack = true
-							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-							if not FastAttack then
-								game:GetService 'VirtualUser':CaptureController()
-								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-						until not _G.AutoKillPiranha or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
-					end
-				end
-			end
-		end
-	end
-end)
-
-local AutoKillSharkToggle = Tabs.Item:AddToggle("AutoKillShark_Toggle", {Title = "Auto Kill Shark", Default = false })
-Options.AutoKillShark_Toggle:SetValue(false)
-
-AutoKillSharkToggle:OnChanged(function(value)
-	_G.AutoKillShark = value
-end)
-
-spawn(function()
-	while wait() do 
-		if _G.AutoKillShark then 
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name , "Shark") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
-					if v.Humanoid.Health > 0 then 
-						repeat
-							game:GetService("RunService").Heartbeat:wait()
-							EquipWeapon(_G.Select_Weapon)
-							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-								local args = {
-									[1] = "Buso"
-								}
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-							v.Head.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
-							FastAttack = true
-							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-							if not FastAttack then
-								game:GetService 'VirtualUser':CaptureController()
-								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-						until not _G.AutoKillShark or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
-					end
-				end
-			end
-		end
-	end
-end)
-
-
-local AutoKillFishCrewMemberToggle = Tabs.Item:AddToggle("AutoKillFishCrewMember_Toggle", {Title = "Auto Kill Fish Crew Member", Default = false })
-Options.AutoKillFishCrewMember_Toggle:SetValue(false)
-
-AutoKillFishCrewMemberToggle:OnChanged(function(value)
-	_G.AutoKillFishCrewMember = value
-end)
-
-spawn(function()
-	while wait() do 
-		if _G.AutoKillFishCrewMember then 
-			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-				if string.find(v.Name , "Fish Crew Member") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
-					if v.Humanoid.Health > 0 then 
-						repeat
-							game:GetService("RunService").Heartbeat:wait()
-							EquipWeapon(_G.Select_Weapon)
-							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-								local args = {
-									[1] = "Buso"
-								}
-								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-							v.Head.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
-							FastAttack = true
-							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
-							if not FastAttack then
-								game:GetService 'VirtualUser':CaptureController()
-								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
-							end
-							PosMon = v.HumanoidRootPart.CFrame
-						until not _G.AutoKillFishCrewMember or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
-					end
-				end
-			end
-		end
-	end
-end)
-
-local SetSpeedBoatSlider = Tabs.Item:AddSlider("SliderSpeedBoat", {
-	Title = "Set Speed boat",
-	Description = "",
-	Default = 400,
-	Min = 0,
-	Max = 1000,
-	Rounding = 1,
-	Callback = function(value)
-		SetSpeedBoat = value
-	end
-})
-
-SetSpeedBoatSlider:OnChanged(function(value)
-	SetSpeedBoat = value
-end)
-
-SetSpeedBoatSlider:SetValue(400)
-
-local SpeedBoatToggle = Tabs.Item:AddToggle("SpeedBoat_Toggle", {Title = "Speed Boat", Default = false })
-Options.SpeedBoat_Toggle:SetValue(false)
-
-SpeedBoatToggle:OnChanged(function(value)
-	_G.SpeedBoat = value
-end)
-
-game:GetService("RunService").RenderStepped:Connect(function()
-    if _G.SpeedBoat then
-        for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
-            if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
-                v:FindFirstChild("VehicleSeat").MaxSpeed = SetSpeedBoat
-            end
-        end
-    end
-end)
-
-local No_clipRockBoatToggle = Tabs.Item:AddToggle("No_clipRockBoat_Toggle", {Title = "Noclip Rock", Default = false })
-Options.No_clipRockBoat_Toggle:SetValue(false)
-
-No_clipRockBoatToggle:OnChanged(function(value)
-	_G.Nocliprock = value
-end)
-
-spawn(function()
-	while wait() do
-		if _G.Nocliprock then
-			if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
-				for _, v in pairs(game.Workspace.Boats:GetDescendants()) do
-					if v:IsA("BasePart") and v.CanCollide == true then
-						v.CanCollide = false
-					end
-				end
-				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-					if v:IsA("BasePart") and v.CanCollide == true then
-						v.CanCollide = false
-					end
-				end
-			elseif game.Players.LocalPlayer.Character.Humanoid.Sit == false then
-				for _, v in pairs(game.Workspace.Boats:GetDescendants()) do
-					if v:IsA("BasePart") and v.CanCollide == false then
-						v.CanCollide = true
-					end
-				end
-				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-					if v:IsA("BasePart") and v.CanCollide == false then
-						v.CanCollide = true
-					end
-				end
-			end
-		end
-	end
-end)
-
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Rainbow Haki",
 	Content = ""
 })
 
-local AutoFarmRainbowToggle = Tabs.Item:AddToggle("AutoRainbow_Toggle", {Title = "Auto Rainbow Haki", Default = false })
+local AutoFarmRainbowToggle = Tabs.Main:AddToggle("AutoRainbow_Toggle", {Title = "Auto Rainbow Haki", Default = false })
 Options.AutoRainbow_Toggle:SetValue(false)
 
 AutoFarmRainbowToggle:OnChanged(function(value)
@@ -4009,7 +3889,7 @@ AutoFarmRainbowToggle:OnChanged(function(value)
 	_G.Settings.Auto_Rainbow_Haki = value
 end)
 
-local AutoFarmRainbowHopToggle = Tabs.Item:AddToggle("AutoRainbowHop_Toggle", {Title = "Auto Rainbow Haki [Hop]", Default = false })
+local AutoFarmRainbowHopToggle = Tabs.Main:AddToggle("AutoRainbowHop_Toggle", {Title = "Auto Rainbow Haki [Hop]", Default = false })
 Options.AutoRainbowHop_Toggle:SetValue(false)
 
 AutoFarmRainbowHopToggle:OnChanged(function(value)
@@ -4172,14 +4052,14 @@ spawn(function()
 end)
 
 if not W1 then
-	Tabs.Item:AddParagraph({
+	Tabs.Main:AddParagraph({
 		Title = "Item",
 		Content = ""
 	})
 end
 
 if W2 then
-local AutoFarmEvoV2Toggle = Tabs.Item:AddToggle("AutoEvoV2_Toggle", {Title = "Auto Evo Race V2", Default = false })
+local AutoFarmEvoV2Toggle = Tabs.Main:AddToggle("AutoEvoV2_Toggle", {Title = "Auto Evo Race V2", Default = false })
 Options.AutoEvoV2_Toggle:SetValue(false)
 	
 AutoFarmEvoV2Toggle:OnChanged(function(value)
@@ -4256,7 +4136,7 @@ end)
 end
 
 if W2 then
-local AutoFarmBartiloToggle = Tabs.Item:AddToggle("AutoBartilo_Toggle", {Title = "Auto Bartilo Quest", Default = false })
+local AutoFarmBartiloToggle = Tabs.Main:AddToggle("AutoBartilo_Toggle", {Title = "Auto Bartilo Quest", Default = false })
 Options.AutoBartilo_Toggle:SetValue(false)
 	
 AutoFarmBartiloToggle:OnChanged(function(value)
@@ -4410,7 +4290,7 @@ end)
 end
 
 if W2 then
-local AutoFarmRengokuToggle = Tabs.Item:AddToggle("AutoRengoku_Toggle", {Title = "Auto Rengoku Swords", Default = false })
+local AutoFarmRengokuToggle = Tabs.Main:AddToggle("AutoRengoku_Toggle", {Title = "Auto Rengoku Swords", Default = false })
 Options.AutoRengoku_Toggle:SetValue(false)
 	
 AutoFarmRengokuToggle:OnChanged(function(value)
@@ -4470,7 +4350,7 @@ end)
 end
 
 if W2 then
-	local AutoLegendarySwordToggle = Tabs.Item:AddToggle("AutoLegendarySword_Toggle", {Title = "Auto Buy Legendary Sword", Default = false })
+	local AutoLegendarySwordToggle = Tabs.Main:AddToggle("AutoLegendarySword_Toggle", {Title = "Auto Buy Legendary Sword", Default = false })
 	Options.AutoLegendarySword_Toggle:SetValue(false)
 		
 	AutoLegendarySwordToggle:OnChanged(function(value)
@@ -4488,7 +4368,7 @@ if W2 then
 			end
 		end
 	end)
-	local AutoEnchancementToggle = Tabs.Item:AddToggle("AutoEnchancement_Toggle", {Title = "Auto Buy Enchancement", Default = false })
+	local AutoEnchancementToggle = Tabs.Main:AddToggle("AutoEnchancement_Toggle", {Title = "Auto Buy Enchancement", Default = false })
 	Options.AutoEnchancement_Toggle:SetValue(false)
 		
 	AutoEnchancementToggle:OnChanged(function(value)
@@ -4509,7 +4389,7 @@ if W2 then
 end
 
 if W3 then	
-	local AutoMusketeerToggle = Tabs.Item:AddToggle("AutoMusketeer_Toggle", {Title = "Auto Musketeer Hat", Default = false })
+	local AutoMusketeerToggle = Tabs.Main:AddToggle("AutoMusketeer_Toggle", {Title = "Auto Musketeer Hat", Default = false })
 	Options.AutoMusketeer_Toggle:SetValue(false)
 		
 	AutoMusketeerToggle:OnChanged(function(value)
@@ -4611,7 +4491,7 @@ if W3 then
 	end)
 end
 if W3 then
-	local AutoFarmHolyToggle = Tabs.Item:AddToggle("AutoHoly_Toggle", {Title = "Auto Holy Torch", Default = false })
+	local AutoFarmHolyToggle = Tabs.Main:AddToggle("AutoHoly_Toggle", {Title = "Auto Holy Torch", Default = false })
 	Options.AutoHoly_Toggle:SetValue(false)
 	
 	AutoFarmHolyToggle:OnChanged(function(value)
@@ -4638,7 +4518,7 @@ if W3 then
 	end)
 end
 if W3 then
-	local YamaSwordToggle = Tabs.Item:AddToggle("YamaSword_Toggle", {Title = "Auto Yama", Default = false })
+	local YamaSwordToggle = Tabs.Main:AddToggle("YamaSword_Toggle", {Title = "Auto Yama", Default = false })
 	Options.YamaSword_Toggle:SetValue(false)
 	
 	YamaSwordToggle:OnChanged(function(value)
@@ -4717,18 +4597,18 @@ if W3 then
 	end)	
 end
 
-local ObservationRange = Tabs.Item:AddParagraph({
+local ObservationRange = Tabs.Main:AddParagraph({
     Title = "Observation",
-    Content = "Observation : "
+    Content = "Observation: "
 })
 
 spawn(function()
 	while wait() do
-		ObservationRange:SetDesc("Observation Range Level : "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))
+		ObservationRange:SetDesc("Observation Range Level: "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))
 	end
 end)
 
-local AutoFarmObservation = Tabs.Item:AddToggle("AutoFarmObservation_Toggle", {Title = "Auto Farm Observation Haki", Default = false })
+local AutoFarmObservation = Tabs.Main:AddToggle("AutoFarmObservation_Toggle", {Title = "Auto Farm Observation Haki", Default = false })
 Options.AutoFarmObservation_Toggle:SetValue(false)
 
 AutoFarmObservation:OnChanged(function(value)
@@ -4736,7 +4616,7 @@ AutoFarmObservation:OnChanged(function(value)
 	_G.Settings.AutoObservation = value
 end)
 
-local AutoFarmObservationHop = Tabs.Item:AddToggle("AutoFarmObservationHop_Toggle", {Title = "Auto Farm Observation Haki [Hop]", Default = false })
+local AutoFarmObservationHop = Tabs.Main:AddToggle("AutoFarmObservationHop_Toggle", {Title = "Auto Farm Observation Haki [Hop]", Default = false })
 Options.AutoFarmObservationHop_Toggle:SetValue(false)
 
 AutoFarmObservationHop:OnChanged(function(value)
@@ -4843,7 +4723,7 @@ spawn(function()
 	end)
 
 if not W1 and not W2 then
-Tabs.Item:AddParagraph({
+Tabs.Main:AddParagraph({
 	Title = "Rip Indar",
 	Content = ""
 })
@@ -4855,7 +4735,7 @@ local Rip_Indar_All_Mon = {
 	["Item"] = "God's Chalice",
 }
 
-local AutoFarmrip_indra = Tabs.Item:AddToggle("AutoFarmrip_indra_Toggle", {Title = "Auto Farm Rip Indar [Boss]", Default = false })
+local AutoFarmrip_indra = Tabs.Main:AddToggle("AutoFarmrip_indra_Toggle", {Title = "Auto Farm Rip Indar [Boss]", Default = false })
 Options.AutoFarmrip_indra_Toggle:SetValue(false)
 
 AutoFarmrip_indra:OnChanged(function(value)
@@ -5003,7 +4883,7 @@ spawn(function()
 end)
 end
 
-local Mob_Kill_Cake_Prince = Tabs.Item:AddParagraph({
+local Mob_Kill_Cake_Prince = Tabs.Main:AddParagraph({
     Title = "Cake Prince",
     Content = "Cake Prince: "
 })
@@ -5012,11 +4892,11 @@ spawn(function()
 	while wait() do
 		pcall(function()
 			if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
+				Mob_Kill_Cake_Prince:SetDesc("Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
+				Mob_Kill_Cake_Prince:SetDesc("Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
+				Mob_Kill_Cake_Prince:SetDesc("Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
 			else
 				Mob_Kill_Cake_Prince:SetDesc("Boss Is Found")
 			end
@@ -5024,7 +4904,7 @@ spawn(function()
 	end
 end)
 
-local AutoFarmKatakuri = Tabs.Item:AddToggle("AutoFarmKatakuri_Toggle", {Title = "Auto Farm Cake Prince", Default = false })
+local AutoFarmKatakuri = Tabs.Main:AddToggle("AutoFarmKatakuri_Toggle", {Title = "Auto Farm Cake Prince", Default = false })
 Options.AutoFarmKatakuri_Toggle:SetValue(false)
 
 AutoFarmKatakuri:OnChanged(function(value)
@@ -5139,7 +5019,7 @@ spawn(function()
 end)
 
 if W3 then
-local StatusBone = Tabs.Item:AddParagraph({
+local StatusBone = Tabs.Main:AddParagraph({
     Title = "Bone",
     Content = "Bones: "
 })
@@ -5152,7 +5032,7 @@ spawn(function()
     end)
 end)
 
-local AutoFarmBone = Tabs.Item:AddToggle("AutoFarmBone_Toggle", {Title = "Auto Farm Bone", Default = false })
+local AutoFarmBone = Tabs.Main:AddToggle("AutoFarmBone_Toggle", {Title = "Auto Farm Bone", Default = false })
 Options.AutoFarmBone_Toggle:SetValue(false)
 
 AutoFarmBone:OnChanged(function(value)
@@ -5291,7 +5171,7 @@ spawn(function()
 	end
 end)
 
-local AutoRandomBone = Tabs.Item:AddToggle("AutoRandomBone_Toggle", {Title = "Auto Random Bone", Default = false })
+local AutoRandomBone = Tabs.Main:AddToggle("AutoRandomBone_Toggle", {Title = "Auto Random Bone", Default = false })
 Options.AutoRandomBone_Toggle:SetValue(false)
 
 AutoRandomBone:OnChanged(function(value)
@@ -5350,7 +5230,7 @@ spawn(function()
 	end
 end)
 
-local StatusElite = Tabs.Item:AddParagraph({
+local StatusElite = Tabs.Main:AddParagraph({
     Title = "Elite Hunter",
     Content = "Status: "
 })
@@ -5359,16 +5239,16 @@ spawn(function()
     while wait() do
         pcall(function()
             if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-                StatusElite:SetDesc("Status : Found | Killed:  "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))	
+                StatusElite:SetDesc("Status: Found | Killed:  "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))	
             else
-                StatusElite:SetDesc("Status : Not Found | Killed: "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))	
+                StatusElite:SetDesc("Status: Not Found | Killed: "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))	
             end
         end)
     end
 end)
 
 
-local AutoEliteHunterToggle = Tabs.Item:AddToggle("AutoEliteHunter_Toggle", {Title = "Auto Elite Hunter", Default = false })
+local AutoEliteHunterToggle = Tabs.Main:AddToggle("AutoEliteHunter_Toggle", {Title = "Auto Elite Hunter", Default = false })
 Options.AutoEliteHunter_Toggle:SetValue(false)
 
 AutoEliteHunterToggle:OnChanged(function(value)
@@ -5376,7 +5256,7 @@ AutoEliteHunterToggle:OnChanged(function(value)
 	_G.Settings.Auto_Elite_Hunter = value
 end)
 
-local AutoEliteHunterHopToggle = Tabs.Item:AddToggle("AutoEliteHunterHop_Toggle", {Title = "Auto Elite Hunter [Hop]", Default = false })
+local AutoEliteHunterHopToggle = Tabs.Main:AddToggle("AutoEliteHunterHop_Toggle", {Title = "Auto Elite Hunter [Hop]", Default = false })
 Options.AutoEliteHunterHop_Toggle:SetValue(false)
 
 AutoEliteHunterHopToggle:OnChanged(function(value)
@@ -5552,7 +5432,7 @@ listShop =  {"Refund Stat [2,500F]","Reroll Race [3,000F]","Haki [25,00$]", "Gep
 "Cutlass [1,000]", "Duel Katana [12,000]", "Iron Mace [25,000]", "Pipe [100,000]", "Triple Katana [60,000]", "Dual-Headed Blade [400,000]", "Bisento [1,000,000]", "Soul Cane [750,000]", "Slingshot [5,000]", "Musket [8,000]", "Flintlock [10,500]", "Refined Flintlock [65,000]", "Cannon [100,000]", "Kabucha [1500F]",
 "Black Cape [50,000]", "Toemo Ring [500,000]", "Swordsman Hat [150,000]"}
 
-local MultiDropdown = Tabs.Shop:AddDropdown("MultiDropdown1", {
+local MultiDropdown = Tabs.Stats:AddDropdown("MultiDropdown1", {
     Title = "Select Shop",
     Description = "",
     Values = listShop,
@@ -5570,7 +5450,7 @@ MultiDropdown:OnChanged(function(Value)
     _G.ListShopBuy = Value
 end)
 
-Tabs.Shop:AddButton({
+Tabs.Stats:AddButton({
     Title = "Buy On Select Shop",
     Description = "",
     Callback = function()
@@ -6032,74 +5912,6 @@ task.spawn(function()
     end
 end)
 
-local StatusKitsune = Tabs.Island:AddParagraph({
-    Title = "Kistune Island",
-    Content = ""
-})
-
-function UpdateKitsune()
-    if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
-        StatusKitsune:SetDesc("Kitsune Island : Found")
-    else
-        StatusKitsune:SetDesc("Kitsune Island : Not Found")
-     end
-end
-
-spawn(function()
-    pcall(function()
-        while wait() do
-            UpdateKitsune()
-        end
-    end)
-end)
-
-local KitsuneToggle = Tabs.Island:AddToggle("KitsuneTp_Toggle", {Title = "Auto Teleports To Kitsune Island", Default = false })
-Options.KitsuneTp_Toggle:SetValue(false)
-
-KitsuneToggle:OnChanged(function(value)
-    _G.TptoKisuneIsland = value
-end)
-
-local KitsuneShrineToggle = Tabs.Island:AddToggle("KitsuneShrineTp_Toggle", {Title = "Auto Teleports To Kitsune Shrine", Default = false })
-Options.KitsuneShrineTp_Toggle:SetValue(false)
-
-KitsuneShrineToggle:OnChanged(function(value)
-    _G.TptoKisuneshrine = value
-end)
-
-spawn(function()
-    while task.wait() do
-        if _G.TptoKisuneshrine then
-            toTarget(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0,0,10))
-        end
-    end
-end)
-
-spawn(function()
-    while task.wait() do
-        if _G.TptoKisuneIsland then
-            toTarget(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0,100,0))
-        end
-    end
-end)
-
-local AzureToggle = Tabs.Island:AddToggle("Azure_Toggle", {Title = "Auto Collect Azure Ember", Default = false })
-Options.Azure_Toggle:SetValue(false)
-
-AzureToggle:OnChanged(function(value)
-    _G.GetAzureEmber = value
-end)
-
-spawn(function()
-    while _G.GetAzureEmber do wait()
-        pcall(function()
-            if game.Workspace.EmberTemplate then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.EmberTemplate.Part.CFrame
-            end
-        end)
-    end
-end)
-
 local SelectRaids = {
     "Flame",
     "Ice",
@@ -6558,6 +6370,400 @@ Tabs.RaceV4:AddButton({
     end
 })
 
+local StatusSeaRough = Tabs.RaceV4:AddParagraph({
+    Title = "Sea Rough",
+    Content = ""
+})
+
+
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name, "Terror") then
+					StatusTerror = "Found"
+				else 
+					StatusTerror = "Not Found"
+				end
+			end
+			
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name, "Piranha") then
+					StatusSea = "Found"
+				else 
+					StatusSea = "Not Found"
+				end
+			end
+			
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name, "Shark") then
+					StatusSea1 = "Found"
+				else 
+					StatusSea1 = "Not Found"
+				end
+			end
+			
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name, "Fish Crew Member") then
+					StatusSea2 = "Found"
+				else 
+			StatusSea2 = "Not Found"
+		end
+    end
+ end)
+end
+end)
+
+task.spawn(function()
+    while wait() do
+        pcall(function()
+			StatusSeaRough:SetDesc("Terrorshark: "..StatusTerror.." | Piranha: "..StatusSea.." | Shark: "..StatusSea1.." | Fish Crew Member:"..StatusSea2) 
+		end)
+	end
+end)
+
+
+local AutoKillEventToggle = Tabs.RaceV4:AddToggle("AutoKillEvent_Toggle", {Title = "Auto Kill [Event]", Default = false })
+Options.AutoKillEvent_Toggle:SetValue(false)
+
+AutoKillEventToggle:OnChanged(function(value)
+	_G.AutoEvent = value
+end)
+
+spawn(function()
+	while wait() do 
+		if _G.AutoEvent then 
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name, "Fish Crew Member") or string.find(v.Name, "Piranha") or string.find(v.Name,"Shark") or string.find(v.Name , "Terror") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
+					if v.Humanoid.Health > 0 then 
+						repeat
+							game:GetService("RunService").Heartbeat:wait()
+							EquipWeapon(_G.Select_Weapon)
+							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+								local args = {
+									[1] = "Buso"
+								}
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+							v.Head.CanCollide = false
+							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+							FastAttack = true
+							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+							if not FastAttack then
+								game:GetService 'VirtualUser':CaptureController()
+								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+						until not _G.AutoEvent or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
+					end
+				end
+			end
+		end
+	end
+end)
+
+local AutoKillTerrorsharkToggle = Tabs.RaceV4:AddToggle("AutoKillTerrorshark_Toggle", {Title = "Auto Kill Terrorshark", Default = false })
+Options.AutoKillTerrorshark_Toggle:SetValue(false)
+
+AutoKillTerrorsharkToggle:OnChanged(function(value)
+	_G.AutoKillTerrorshark = value
+end)
+
+spawn(function()
+	while wait() do 
+		if _G.AutoKillTerrorshark then 
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name , "Terror") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
+					if v.Humanoid.Health > 0 then 
+						repeat
+							game:GetService("RunService").Heartbeat:wait()
+							EquipWeapon(_G.Select_Weapon)
+							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+								local args = {
+									[1] = "Buso"
+								}
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+							v.Head.CanCollide = false
+							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+							FastAttack = true
+							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+							if not FastAttack then
+								game:GetService 'VirtualUser':CaptureController()
+								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+						until not _G.AutoKillTerrorshark or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
+					end
+				end
+			end
+		end
+	end
+end)
+
+local AutoKillPiranhaToggle = Tabs.RaceV4:AddToggle("AutoKillPiranha_Toggle", {Title = "Auto Kill Piranha", Default = false })
+Options.AutoKillPiranha_Toggle:SetValue(false)
+
+AutoKillPiranhaToggle:OnChanged(function(value)
+	_G.AutoKillPiranha = value
+end)
+
+spawn(function()
+	while wait() do 
+		if _G.AutoKillPiranha then 
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name , "Piranha") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
+					if v.Humanoid.Health > 0 then 
+						repeat
+							game:GetService("RunService").Heartbeat:wait()
+							EquipWeapon(_G.Select_Weapon)
+							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+								local args = {
+									[1] = "Buso"
+								}
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+							v.Head.CanCollide = false
+							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+							FastAttack = true
+							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+							if not FastAttack then
+								game:GetService 'VirtualUser':CaptureController()
+								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+						until not _G.AutoKillPiranha or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
+					end
+				end
+			end
+		end
+	end
+end)
+
+local AutoKillSharkToggle = Tabs.RaceV4:AddToggle("AutoKillShark_Toggle", {Title = "Auto Kill Shark", Default = false })
+Options.AutoKillShark_Toggle:SetValue(false)
+
+AutoKillSharkToggle:OnChanged(function(value)
+	_G.AutoKillShark = value
+end)
+
+spawn(function()
+	while wait() do 
+		if _G.AutoKillShark then 
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name , "Shark") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
+					if v.Humanoid.Health > 0 then 
+						repeat
+							game:GetService("RunService").Heartbeat:wait()
+							EquipWeapon(_G.Select_Weapon)
+							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+								local args = {
+									[1] = "Buso"
+								}
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+							v.Head.CanCollide = false
+							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+							FastAttack = true
+							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+							if not FastAttack then
+								game:GetService 'VirtualUser':CaptureController()
+								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+						until not _G.AutoKillShark or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
+					end
+				end
+			end
+		end
+	end
+end)
+
+
+local AutoKillFishCrewMemberToggle = Tabs.RaceV4:AddToggle("AutoKillFishCrewMember_Toggle", {Title = "Auto Kill Fish Crew Member", Default = false })
+Options.AutoKillFishCrewMember_Toggle:SetValue(false)
+
+AutoKillFishCrewMemberToggle:OnChanged(function(value)
+	_G.AutoKillFishCrewMember = value
+end)
+
+spawn(function()
+	while wait() do 
+		if _G.AutoKillFishCrewMember then 
+			for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+				if string.find(v.Name , "Fish Crew Member") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 500 then 
+					if v.Humanoid.Health > 0 then 
+						repeat
+							game:GetService("RunService").Heartbeat:wait()
+							EquipWeapon(_G.Select_Weapon)
+							if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+								local args = {
+									[1] = "Buso"
+								}
+								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+							v.Head.CanCollide = false
+							v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+							FastAttack = true
+							toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
+							if not FastAttack then
+								game:GetService 'VirtualUser':CaptureController()
+								game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+							end
+							PosMon = v.HumanoidRootPart.CFrame
+						until not _G.AutoKillFishCrewMember or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
+					end
+				end
+			end
+		end
+	end
+end)
+
+local SetSpeedBoatSlider = Tabs.RaceV4:AddSlider("SliderSpeedBoat", {
+	Title = "Set Speed boat",
+	Description = "",
+	Default = 400,
+	Min = 0,
+	Max = 1000,
+	Rounding = 1,
+	Callback = function(value)
+		SetSpeedBoat = value
+	end
+})
+
+SetSpeedBoatSlider:OnChanged(function(value)
+	SetSpeedBoat = value
+end)
+
+SetSpeedBoatSlider:SetValue(400)
+
+local SpeedBoatToggle = Tabs.RaceV4:AddToggle("SpeedBoat_Toggle", {Title = "Speed Boat", Default = false })
+Options.SpeedBoat_Toggle:SetValue(false)
+
+SpeedBoatToggle:OnChanged(function(value)
+	_G.SpeedBoat = value
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if _G.SpeedBoat then
+        for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
+            if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
+                v:FindFirstChild("VehicleSeat").MaxSpeed = SetSpeedBoat
+            end
+        end
+    end
+end)
+
+local No_clipRockBoatToggle = Tabs.RaceV4:AddToggle("No_clipRockBoat_Toggle", {Title = "Noclip Rock", Default = false })
+Options.No_clipRockBoat_Toggle:SetValue(false)
+
+No_clipRockBoatToggle:OnChanged(function(value)
+	_G.Nocliprock = value
+end)
+
+spawn(function()
+	while wait() do
+		if _G.Nocliprock then
+			if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+				for _, v in pairs(game.Workspace.Boats:GetDescendants()) do
+					if v:IsA("BasePart") and v.CanCollide == true then
+						v.CanCollide = false
+					end
+				end
+				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("BasePart") and v.CanCollide == true then
+						v.CanCollide = false
+					end
+				end
+			elseif game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+				for _, v in pairs(game.Workspace.Boats:GetDescendants()) do
+					if v:IsA("BasePart") and v.CanCollide == false then
+						v.CanCollide = true
+					end
+				end
+				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("BasePart") and v.CanCollide == false then
+						v.CanCollide = true
+					end
+				end
+			end
+		end
+	end
+end)
+
+local StatusKitsune = Tabs.RaceV4:AddParagraph({
+    Title = "Kistune Island",
+    Content = ""
+})
+
+function UpdateKitsune()
+    if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
+        StatusKitsune:SetDesc("Kitsune Island: Found")
+    else
+        StatusKitsune:SetDesc("Kitsune Island: Not Found")
+     end
+end
+
+spawn(function()
+    pcall(function()
+        while wait() do
+            UpdateKitsune()
+        end
+    end)
+end)
+
+local KitsuneToggle = Tabs.RaceV4:AddToggle("KitsuneTp_Toggle", {Title = "Auto Teleports To Kitsune Island", Default = false })
+Options.KitsuneTp_Toggle:SetValue(false)
+
+KitsuneToggle:OnChanged(function(value)
+    _G.TptoKisuneIsland = value
+end)
+
+local KitsuneShrineToggle = Tabs.RaceV4:AddToggle("KitsuneShrineTp_Toggle", {Title = "Auto Teleports To Kitsune Shrine", Default = false })
+Options.KitsuneShrineTp_Toggle:SetValue(false)
+
+KitsuneShrineToggle:OnChanged(function(value)
+    _G.TptoKisuneshrine = value
+end)
+
+spawn(function()
+    while task.wait() do
+        if _G.TptoKisuneshrine then
+            toTarget(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0,0,10))
+        end
+    end
+end)
+
+spawn(function()
+    while task.wait() do
+        if _G.TptoKisuneIsland then
+            toTarget(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0,100,0))
+        end
+    end
+end)
+
+local AzureToggle = Tabs.RaceV4:AddToggle("Azure_Toggle", {Title = "Auto Collect Azure Ember", Default = false })
+Options.Azure_Toggle:SetValue(false)
+
+AzureToggle:OnChanged(function(value)
+    _G.GetAzureEmber = value
+end)
+
+spawn(function()
+    while _G.GetAzureEmber do wait()
+        pcall(function()
+            if game.Workspace.EmberTemplate then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.EmberTemplate.Part.CFrame
+            end
+        end)
+    end
+end)
+
 FruitList = {
     "Bomb-Bomb",
     "Spike-Spike",
@@ -6594,7 +6800,7 @@ FruitList = {
     "Dragon-Dragon"
 }
 
-local FruitListSet = Tabs.Fruit:AddDropdown("Dropdown5", {
+local FruitListSet = Tabs.Raid:AddDropdown("Dropdown5", {
     Title = "Select Fruit Sniper",
     Values = FruitList,
     Multi = false,
@@ -6607,19 +6813,19 @@ FruitListSet:OnChanged(function(value)
     _G.SelectFruit = value
 end)
 
-local SniperFruitToggle = Tabs.Fruit:AddToggle("SniperFruit_Toggle", {Title = "Auto Buy Fruit Sniper", Default = false })
+local SniperFruitToggle = Tabs.Raid:AddToggle("SniperFruit_Toggle", {Title = "Auto Buy Fruit Sniper", Default = false })
 Options.SniperFruit_Toggle:SetValue(false)
 
 SniperFruitToggle:OnChanged(function(value)
     _G.AutoBuyFruitSniper = value
 end)
 
-Tabs.Fruit:AddParagraph({
+Tabs.Raid:AddParagraph({
     Title = "Fruit",
     Content = ""
 })
 
-local FruitList1Set = Tabs.Fruit:AddDropdown("Dropdown6", {
+local FruitList1Set = Tabs.Raid:AddDropdown("Dropdown6", {
     Title = "Select Fruit",
     Values = FruitList,
     Multi = false,
@@ -6632,7 +6838,7 @@ FruitList1Set:OnChanged(function(value)
     _G.SelectFruitEat = value
 end)
 
-local EatFruitToggle = Tabs.Fruit:AddToggle("EatFruit_Toggle", {Title = "Auto Eat Fruit", Default = false })
+local EatFruitToggle = Tabs.Raid:AddToggle("EatFruit_Toggle", {Title = "Auto Eat Fruit", Default = false })
 Options.EatFruit_Toggle:SetValue(false)
 
 EatFruitToggle:OnChanged(function(value)
@@ -6660,7 +6866,7 @@ spawn(function()
     end)
 end)
 
-local GetInventoryFruitToggle = Tabs.Fruit:AddToggle("GetInventoryFruit_Toggle", {Title = "Get Fruit Inventory", Default = false })
+local GetInventoryFruitToggle = Tabs.Raid:AddToggle("GetInventoryFruit_Toggle", {Title = "Get Fruit Inventory", Default = false })
 Options.GetInventoryFruit_Toggle:SetValue(false)
 
 GetInventoryFruitToggle:OnChanged(function(value)
@@ -6687,14 +6893,14 @@ spawn(function()
     end
 end)
 
-local Random_AutoToggle = Tabs.Fruit:AddToggle("Random_Auto_Toggle", {Title = "Auto Random Fruit", Default = false })
+local Random_AutoToggle = Tabs.Raid:AddToggle("Random_Auto_Toggle", {Title = "Auto Random Fruit", Default = false })
 Options.Random_Auto_Toggle:SetValue(false)
 
 Random_AutoToggle:OnChanged(function(value)
     _G.Random_Auto = value
 end)
 
-local AutoStoreToggle = Tabs.Fruit:AddToggle("AutoStoreFruit_Toggle", {Title = "Auto Store Fruit", Default = false })
+local AutoStoreToggle = Tabs.Raid:AddToggle("AutoStoreFruit_Toggle", {Title = "Auto Store Fruit", Default = false })
 Options.AutoStoreFruit_Toggle:SetValue(false)
 
 AutoStoreToggle:OnChanged(function(value)
@@ -6730,35 +6936,35 @@ spawn(function()
 	end)
 end)
 
-local ESPPlrToggle = Tabs.ESP:AddToggle("ESPPlr_Toggle", {Title = "ESP Player", Default = false })
+local ESPPlrToggle = Tabs.Visual:AddToggle("ESPPlr_Toggle", {Title = "ESP Player", Default = false })
 Options.ESPPlr_Toggle:SetValue(false)
 
 ESPPlrToggle:OnChanged(function(value)
     ESPPlayer = value
 end)
 
-local ESPChestToggle = Tabs.ESP:AddToggle("ESPChest_Toggle", {Title = "ESP Chest", Default = false })
+local ESPChestToggle = Tabs.Visual:AddToggle("ESPChest_Toggle", {Title = "ESP Chest", Default = false })
 Options.ESPChest_Toggle:SetValue(false)
 
 ESPChestToggle:OnChanged(function(value)
     ChestESP = value
 end)
 
-local ESPFruitDToggle = Tabs.ESP:AddToggle("ESPFruitD_Toggle", {Title = "ESP Devil Fruit", Default = false })
+local ESPFruitDToggle = Tabs.Visual:AddToggle("ESPFruitD_Toggle", {Title = "ESP Devil Fruit", Default = false })
 Options.ESPFruitD_Toggle:SetValue(false)
 
 ESPFruitDToggle:OnChanged(function(value)
     DevilFruitESP = value
 end)
 
-local ESPFlowerDToggle = Tabs.ESP:AddToggle("ESPFlower_Toggle", {Title = "ESP Flower", Default = false })
+local ESPFlowerDToggle = Tabs.Visual:AddToggle("ESPFlower_Toggle", {Title = "ESP Flower", Default = false })
 Options.ESPFlower_Toggle:SetValue(false)
 
 ESPFlowerDToggle:OnChanged(function(value)
     FlowerESP = value
 end)
 
-local ESPIslandToggle = Tabs.ESP:AddToggle("ESPIsland_Toggle", {Title = "ESP Island", Default = false })
+local ESPIslandToggle = Tabs.Visual:AddToggle("ESPIsland_Toggle", {Title = "ESP Island", Default = false })
 Options.ESPIsland_Toggle:SetValue(false)
 
 ESPIslandToggle:OnChanged(function(value)
@@ -6806,7 +7012,7 @@ spawn(function()
     end
 end)
 
-loadstring(game:HttpGet("https://pastebin.com/raw/igskZDq5"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/MTienHub/main/codesp.txt"))()
 
 Tabs.Misc:AddButton({
     Title = "Hop Server",
@@ -7491,3 +7697,16 @@ WhiteToggle:OnChanged(function(value)
     end
 end)
 end
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+SaveManager:IgnoreThemeSettings()
+SaveManager:SetIgnoreIndexes({})
+InterfaceManager:SetFolder("MTien Hub 2.0")
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+Fluent:Notify({
+    Title = "MTien Hub System",
+    Content = _G.ThongBao,
+    Duration = 8
+})
